@@ -1,4 +1,3 @@
-<h1>欢迎来到paragon lab的主页！</h1>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -24,29 +23,91 @@
             display: inline-block;
             width: 60px;
         }
+        img {
+            max-width: 300px;
+            height: auto;
+            margin: 10px 0;
+        }
+
+        /* 项目进度条样式 */
+        .project-section {
+            margin-top: 30px;
+        }
+        .project-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .project-item {
+            margin-bottom: 12px;
+        }
+        .project-name {
+            margin-bottom: 4px;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: #eee;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .progress {
+            height: 100%;
+            background: #409eff;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
+    <h1>欢迎来到 Paragon Lab 的主页！</h1>
+
     <div class="lab-title">Paragon Lab 典范实验室</div>
     <img src="labLogo.png" alt="Paragon Lab 实验室Logo">
-    <div class="section">
-        <span class="label">成员：</span>
-    </div>
 
     <div class="section">
         <span class="label">核心：</span>
         段金利、朱志穆、李柯欣、杨锦豪
     </div>
-
-
     <div class="section">
         <span class="label">实习：</span>
         哈力木拉提（北京航空航天大学）、汪涌泉（武汉大学）
     </div>
-
     <div class="section">
         <span class="label">合作方：</span>
         胡淙夏（地表动力科技）、章吕天阳（重庆大学）、Le zhang（伯明翰大学）
+    </div>
+
+    <!-- 项目 + 进度条 -->
+    <div class="project-section">
+        <div class="project-title">当前论文项目立项与进展</div>
+
+        <div class="project-item">
+            <div class="project-name">1. 自动驾驶+具身多模态VLM数据分析</div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 80%"></div>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <div class="project-name">2. 感知多目标追踪</div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 78%"></div>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <div class="project-name">3. 地表动力机器人项目</div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 43%"></div>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <div class="project-name">4. 世界模型*医疗影像仿真项目</div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 30%"></div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
