@@ -7,44 +7,116 @@
     <style>
         * { margin:0; padding:0; box-sizing:border-box; }
         body { font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:#f8f9fa; color:#333; line-height:1.7; }
+        
+        /* 导航栏 */
         .navbar { background:#1a1a1a; color:white; padding:18px 0; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
         .container { width:92%; max-width:1100px; margin:0 auto; }
         .nav-inner { display:flex; justify-content:space-between; align-items:center; }
         .nav-title { font-size:22px; font-weight:600; }
         .nav-links { display:flex; gap:24px; }
         .nav-links a { color:#eee; text-decoration:none; font-size:15px; }
+        
+        /* 卡片 */
         .card { background:white; border-radius:12px; padding:35px; margin:35px 0; box-shadow:0 4px 18px rgba(0,0,0,0.05); }
-        .section-title { font-size:20px; font-weight:600; margin-bottom:20px; padding-bottom:8px; border-bottom:2px solid #eee; }
+        .section-title { font-size:20px; font-weight:600; margin-bottom:25px; padding-bottom:8px; border-bottom:2px solid #eee; }
+        
+        /* 成员照片网格布局 */
+        .member-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .member-card {
+            text-align: center;
+        }
+        .member-photo {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 0 auto 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .member-name {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+        .member-role {
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* 普通信息行 */
         .info-row { font-size:16px; margin:10px 0; }
         .label { font-weight:600; min-width:80px; display:inline-block; color:#222; }
     </style>
 </head>
 <body>
 
+<!-- 导航 -->
 <div class="navbar">
     <div class="container nav-inner">
         <div class="nav-title">实验室成员</div>
         <div class="nav-links">
             <a href="index.html">返回主页</a>
-            <a href="projects.html" target="_blank">当前项目</a>
+            <a href="projects.html">当前项目</a>
         </div>
     </div>
 </div>
 
 <div class="container">
     <div class="card">
-        <div class="section-title">成员介绍</div>
+        <div class="section-title">核心成员</div>
+        <div class="member-grid">
+            <!-- 成员1 -->
+            <div class="member-card">
+                <img src="/paragonLab-CN.github.io/memberPhoto/photo_default.png" class="member-photo">
+                <div class="member-name">段金利</div>
+                <div class="member-role">核心成员</div>
+            </div>
+            <!-- 成员2 -->
+            <div class="member-card">
+                <img src="/paragonLab-CN.github.io/memberPhoto/photo_default.png" class="member-photo">
+                <div class="member-name">朱志穆</div>
+                <div class="member-role">核心成员</div>
+            </div>
+            <!-- 成员3 -->
+            <div class="member-card">
+                <img src="/paragonLab-CN.github.io/memberPhoto/photo_default.png" class="member-photo">
+                <div class="member-name">李柯欣</div>
+                <div class="member-role">核心成员</div>
+            </div>
+            <!-- 成员4 -->
+            <div class="member-card">
+                <img src="/paragonLab-CN.github.io/memberPhoto/photo_default.png" class="member-photo">
+                <div class="member-name">杨锦豪</div>
+                <div class="member-role">核心成员</div>
+            </div>
+        </div>
+    </div>
 
-        <div class="info-row">
-            <span class="label">核心成员：</span>
-            段金利、朱志穆、李柯欣、杨锦豪
+    <div class="card">
+        <div class="section-title">实习成员</div>
+        <div class="member-grid">
+            <div class="member-card">
+                <img src="/paragonLab-CN.github.io/memberPhoto/photo_default.png" class="member-photo">
+                <div class="member-name">哈力木拉提</div>
+                <div class="member-role">北京航空航天大学</div>
+            </div>
+            <div class="member-card">
+                <img src="/paragonLab-CN.github.io/memberPhoto/photo_default.png" class="member-photo">
+                <div class="member-name">汪涌泉</div>
+                <div class="member-role">武汉大学</div>
+            </div>
         </div>
+    </div>
+
+    <div class="card">
+        <div class="section-title">合作方</div>
         <div class="info-row">
-            <span class="label">实习成员：</span>
-            哈力木拉提（北京航空航天大学）、汪涌泉（武汉大学）
-        </div>
-        <div class="info-row">
-            <span class="label">合作方：</span>
+            <span class="label">合作：</span>
             胡淙夏（地表动力科技）、章吕天阳（重庆大学）、Le zhang（伯明翰大学）
         </div>
     </div>
