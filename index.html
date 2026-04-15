@@ -14,7 +14,7 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             background-color: #f8f9fa;
             color: #333;
-            line-height: 1.7;
+            line-height: 1.8;
         }
         .navbar {
             background-color: #1a1a1a;
@@ -41,7 +41,7 @@
         }
         .nav-links {
             display: flex;
-            gap: 24px;
+            gap: 26px;
         }
         .nav-links a {
             color: #eee;
@@ -52,35 +52,118 @@
         .nav-links a:hover {
             color: #fff;
         }
+
+        /* 首页大图 */
+        .hero {
+            background: linear-gradient(to right, #0b4a75, #1a73b9);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 18px;
+            opacity: 0.95;
+        }
+
+        /* 卡片 */
         .card {
             background: white;
             border-radius: 12px;
             padding: 35px;
-            margin: 35px 0;
+            margin: 25px 0;
             box-shadow: 0 4px 18px rgba(0,0,0,0.05);
-            text-align: center;
         }
+
+        /* 实验室标题区 */
         .lab-header {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 25px;
+            gap: 24px;
+            margin-bottom: 20px;
             flex-wrap: wrap;
+            justify-content: center;
         }
         .lab-logo {
-            width: 90px;
-            height: 90px;
+            width: 100px;
+            height: 100px;
             object-fit: contain;
         }
         .lab-title {
-            font-size: 28px;
+            font-size: 32px;
             font-weight: 700;
             color: #222;
         }
-        .desc {
+
+        /* 板块标题 */
+        .section-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin: 20px 0 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #eee;
+            color: #222;
+        }
+
+        /* 简介 */
+        .about {
             font-size: 16px;
-            color: #555;
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        /* 研究方向 */
+        .research-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 10px;
+        }
+        .tag {
+            background: #eef5ff;
+            color: #1a73b9;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* 新闻动态 */
+        .news-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .news-date {
+            color: #666;
+            font-size: 13px;
+            margin-right: 10px;
+        }
+
+        /* 最新项目预览 */
+        .project-preview {
+            margin-top: 10px;
+        }
+        .project-item {
+            margin-bottom: 14px;
+        }
+        .project-name {
+            font-size: 15px;
+            margin-bottom: 6px;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #f1f1f1;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .progress {
+            height: 100%;
+            background: #3273dc;
         }
     </style>
 </head>
@@ -97,14 +180,73 @@
     </div>
 </div>
 
-<!-- 主页内容 -->
+<!-- 顶部横幅 -->
+<div class="hero">
+    <div class="container">
+        <h1>典范实验室 · Paragon Lab</h1>
+        <p>专注人工智能、自动驾驶、机器人与医疗影像研究</p>
+    </div>
+</div>
+
+<!-- 主体内容 -->
 <div class="container">
+    <!-- 实验室介绍 -->
     <div class="card">
         <div class="lab-header">
             <img src="labLogo.png" alt="Paragon Lab Logo" class="lab-logo">
             <div class="lab-title">典范实验室</div>
         </div>
-        <p class="desc">专注于自动驾驶、多模态感知、机器人、医疗影像仿真研究</p>
+
+        <div class="section-title">实验室简介</div>
+        <p class="about">
+            Paragon Lab 致力于前沿人工智能技术研究，重点方向包括自动驾驶感知、具身智能、多模态大模型、机器人系统、医疗影像仿真与世界模型等领域。我们与国内外高校及企业深度合作，推动学术创新与产业落地。
+        </p>
+
+        <div class="section-title">主要研究方向</div>
+        <div class="research-list">
+            <span class="tag">自动驾驶</span>
+            <span class="tag">多模态VLM</span>
+            <span class="tag">目标追踪</span>
+            <span class="tag">具身智能</span>
+            <span class="tag">机器人</span>
+            <span class="tag">医疗影像仿真</span>
+            <span class="tag">世界模型</span>
+        </div>
+    </div>
+
+    <!-- 最新项目预览 -->
+    <div class="card">
+        <div class="section-title">最新项目进展</div>
+        <div class="project-preview">
+            <div class="project-item">
+                <div class="project-name">自动驾驶 + 具身多模态VLM数据分析</div>
+                <div class="progress-bar"><div class="progress" style="width:80%"></div></div>
+            </div>
+            <div class="project-item">
+                <div class="project-name">感知多目标追踪</div>
+                <div class="progress-bar"><div class="progress" style="width:78%"></div></div>
+            </div>
+        </div>
+        <p style="margin-top:12px;">
+            <a href="projects.html" target="_blank" style="color:#1a73b9;">查看全部项目 →</a>
+        </p>
+    </div>
+
+    <!-- 实验室动态 -->
+    <div class="card">
+        <div class="section-title">实验室动态</div>
+        <div class="news-item">
+            <span class="news-date">2025-12-20</span>
+            项目《自动驾驶感知》取得重要进展
+        </div>
+        <div class="news-item">
+            <span class="news-date">2025-11-05</span>
+            新增两名实习成员，分别来自北航与武汉大学
+        </div>
+        <div class="news-item">
+            <span class="news-date">2025-10-01</span>
+            与地表动力科技、重庆大学、伯明翰大学达成合作
+        </div>
     </div>
 </div>
 
